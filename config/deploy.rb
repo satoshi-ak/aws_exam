@@ -4,7 +4,7 @@ lock "~> 3.16.0"
 set :application, "test_aws"
 set :repo_url, 'https://github.com/satoshi-ak/aws_exam.git'
 
- Default branch is :master
+set :branch, ENV['BRANCH'] || 'master'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
@@ -17,7 +17,7 @@ set :repo_url, 'https://github.com/satoshi-ak/aws_exam.git'
  # 保持するバージョンの個数(※後述)
  set :keep_releases, 5
  # Rubyのバージョン
- set :rbenv_ruby, '3.0.1'
+ set :rbenv_ruby, '2.6.5'
  set :rbenv_type, :system
  # 出力するログのレベル。エラーログを詳細に見たい場合は :debug に設定する。
  # 本番環境用のものであれば、 :info程度が普通。
