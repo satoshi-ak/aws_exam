@@ -10,7 +10,6 @@ set :branch, ENV['BRANCH'] || 'master'
 # Default deploy_to directory is /var/www/my_app_name
  set :deploy_to, "/var/www/test_aws"
 
- set :deploy_to, '/var/www/achieve'
  # シンボリックリンクをはるフォルダ・ファイル
  set :linked_files, %w{.env config/secrets.yml}
  set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
